@@ -1,0 +1,23 @@
+name: Grav meta JSON pages
+version: 0.0.1
+description: Enables output meta data as JSON.
+author:
+  name: tarmo888
+homepage: https://github.com/tarmo888/grav-plugin-meta-as-json
+bugs: https://github.com/tarmo888/grav-plugin-meta-as-json/issues
+keywords: meta, json, api, web service
+icon: code
+license: MIT
+
+form:
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 1
+      options:
+          1: Enabled
+          0: Disabled
+      validate:
+          type: bool

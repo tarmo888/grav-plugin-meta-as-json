@@ -1,0 +1,7 @@
+{% set metadata = [] %}
+{% for key, meta in page.metadata %}
+    {% if metadata[key] is not defined and meta.content is defined %}
+        {% set metadata = metadata|merge({(key) : meta.content}) %}
+    {% endif %}
+{% endfor %}
+{{ metadata|dump }}

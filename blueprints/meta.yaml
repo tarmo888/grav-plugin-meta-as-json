@@ -1,0 +1,37 @@
+rules:
+  slug:
+    pattern: '[a-zA-Zа-яA-Я0-9_\-]+'
+    min: 1
+    max: 200
+
+form:
+  validation: loose
+  fields:
+
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: PLUGIN_ADMIN.CONTENT
+
+          fields:
+            header.title:
+              type: text
+              label: PLUGIN_ADMIN.TITLE
+            header.metadata:
+              type: array
+              label: PLUGIN_ADMIN.METADATA
+              placeholder_key: PLUGIN_ADMIN.METADATA_KEY
+              placeholder_value: PLUGIN_ADMIN.METADATA_VALUE
+
+            route:
+              type: select
+              label: PLUGIN_ADMIN.PARENT
+              classes: fancy
+              '@data-options': '\Grav\Common\Page\Pages::parents'
+              '@data-default': '\Grav\Plugin\admin::route'
+              options:
+                '/': PLUGIN_ADMIN.DEFAULT_OPTION_ROOT
