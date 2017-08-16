@@ -1,6 +1,6 @@
 # Grav meta JSON pages
 
-Plugin is for [Grav CMS](http://github.com/getgrav/grav).
+Plugin for [Grav CMS](http://github.com/getgrav/grav).
 
 ## Installation
 
